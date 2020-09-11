@@ -215,7 +215,7 @@ public class Individual : BankAccount
             else
             {
                 Console.WriteLine("Введите целое положительное число");
-                return Cashout();
+                return CashOut();
             }
        
     }
