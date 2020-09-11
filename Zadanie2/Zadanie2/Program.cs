@@ -81,15 +81,13 @@ namespace Zadanie2
                             else if (accounttype == "Кредитный счет")
                             {
                                 client1.PrintDate();
-                                client1.PrintSum();
-                                client1.CashOut();
+                                client1.Credit();
                                 Main();
                             }
                             else
                             {
-                                
                                 client1.PrintDate();
-                                client1.Credit();
+                                client1.CashOut();
                                 Main();
 
                             }
@@ -209,9 +207,17 @@ public class Individual : BankAccount
     {
         Console.WriteLine("Какую сумму вы хотите снять со счета?");
         int moneyout = Convert.ToInt32(Console.ReadLine());
-        Sum = Sum - moneyout;
-        Console.WriteLine($"Баланс будет равен {Sum} {Currency}");
-        return Sum;
+          if(moneyout>0){
+                Sum = Sum - moneyout;
+                Console.WriteLine($"Баланс будет равен {Sum} {Currency}");
+                return Sum;
+            }
+            else
+            {
+                Console.WriteLine("Введите целое положительное число");
+                return Cashout();
+            }
+       
     }
     public void Credit()
     {
