@@ -34,6 +34,8 @@ namespace Zadanie2
                 Console.WriteLine("Введите число в диапазоне от 10000 до 10009");
                 Main();
             }
+            
+            Console.ReadKey();
         }
 
         public static void DataBase(string accountnumber)
