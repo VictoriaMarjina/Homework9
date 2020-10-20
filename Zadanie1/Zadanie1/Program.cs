@@ -18,6 +18,8 @@ namespace Zadanie1
             Aspirant database2 = new Aspirant();
             database2 = new Aspirant(x);
             Switch(database,database2,w,m,j,x);
+            
+            Console.ReadKey();
 
         }
 
